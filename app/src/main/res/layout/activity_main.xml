@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Título -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#76E7CA"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text="Índice de Massa Corporal"
+            android:textSize="25sp" />
+
+        <!-- Inputs de Nome, Idade, Altura e Peso -->
+        <EditText
+            android:id="@+id/nome"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Nome"
+            android:inputType="text"
+            android:layout_marginTop="16dp"
+            android:padding="5dp"/>
+
+        <EditText
+            android:id="@+id/idade"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Idade"
+            android:inputType="number"
+            android:layout_marginTop="16dp"
+            android:padding="5dp"/>
+
+        <EditText
+            android:id="@+id/altura"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Altura"
+            android:inputType="numberDecimal"
+            android:layout_marginTop="16dp"
+            android:padding="5dp"/>
+
+        <EditText
+            android:id="@+id/peso"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Peso"
+            android:inputType="numberDecimal"
+            android:layout_marginTop="16dp"
+            android:padding="5dp"/>
+
+        <!-- RadioGroup para selecionar o sexo -->
+        <RadioGroup
+            android:id="@+id/sexo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <RadioButton
+                android:id="@+id/feminino"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="Feminino" />
+
+            <RadioButton
+                android:id="@+id/masculino"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="Masculino" />
+        </RadioGroup>
+
+        <!-- Resultado IMC e tabela de referência -->
+        <TextView
+            android:id="@+id/resultadoIMC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Resultado: "
+            android:textSize="20sp"
+            android:layout_marginTop="16dp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="283dp"
+            app:srcCompat="@drawable/tabela"
+            android:contentDescription="Tabela de referência IMC"
+            android:layout_marginTop="16dp" />
+
+        <!-- Botões de Calcular e Limpar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/btnEnviar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:minHeight="56dp"
+                android:padding="16dp"
+                android:text="Calcular IMC" />
+
+            <Button
+                android:id="@+id/btnLimpar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:minHeight="56dp"
+                android:padding="16dp"
+                android:text="Limpar" />
+        </LinearLayout>
+
+        <!-- Lista de Usuários -->
+        <LinearLayout
+            android:id="@+id/userContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp" />
+
+    </LinearLayout>
+</ScrollView>
