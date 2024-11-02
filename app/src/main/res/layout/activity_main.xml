@@ -92,7 +92,8 @@
             android:layout_height="wrap_content"
             android:text="Resultado: "
             android:textSize="20sp"
-            android:layout_marginTop="16dp" />
+            android:layout_marginTop="16dp"
+            android:visibility="gone"/>
 
         <ImageView
             android:id="@+id/imageView"
@@ -129,13 +130,14 @@
                 android:text="Limpar" />
         </LinearLayout>
 
-        <!-- Lista de Usuários -->
+        <!-- Contêiner para exibir cada usuário com botões individuais de editar e deletar -->
         <LinearLayout
             android:id="@+id/userContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="10dp"
+            android:visibility="gone"/>
 
     </LinearLayout>
 </ScrollView>
